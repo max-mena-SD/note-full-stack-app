@@ -1,33 +1,33 @@
-const exports = {}
+const exports = {};
 Object.defineProperty(exports, "__esModule", { value: true });
 
 import {
-  PrismaClientKnownRequestError,
-  PrismaClientUnknownRequestError,
-  PrismaClientRustPanicError,
-  PrismaClientInitializationError,
-  PrismaClientValidationError,
-  NotFoundError,
-  getPrismaClient,
-  sqltag,
-  empty,
-  join,
-  raw,
-  Decimal,
   Debug,
-  objectEnumValues,
-  makeStrictEnum,
-  Extensions,
+  Decimal,
   defineDmmfProperty,
-  Public,
+  empty,
+  Extensions,
+  getPrismaClient,
   getRuntime,
-  skip
-} from '.././runtime/edge-esm.js'
+  join,
+  makeStrictEnum,
+  NotFoundError,
+  objectEnumValues,
+  PrismaClientInitializationError,
+  PrismaClientKnownRequestError,
+  PrismaClientRustPanicError,
+  PrismaClientUnknownRequestError,
+  PrismaClientValidationError,
+  Public,
+  raw,
+  skip,
+  sqltag,
+} from ".././runtime/edge-esm.js";
 
-const Prisma = {}
+const Prisma = {};
 
-exports.Prisma = Prisma
-exports.$Enums = {}
+exports.Prisma = Prisma;
+exports.$Enums = {};
 
 /**
  * Prisma Client JS version: 5.21.1
@@ -35,78 +35,73 @@ exports.$Enums = {}
  */
 Prisma.prismaVersion = {
   client: "5.21.1",
-  engine: "bf0e5e8a04cada8225617067eaa03d041e2bba36"
-}
+  engine: "bf0e5e8a04cada8225617067eaa03d041e2bba36",
+};
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
-Prisma.PrismaClientUnknownRequestError = PrismaClientUnknownRequestError
-Prisma.PrismaClientRustPanicError = PrismaClientRustPanicError
-Prisma.PrismaClientInitializationError = PrismaClientInitializationError
-Prisma.PrismaClientValidationError = PrismaClientValidationError
-Prisma.NotFoundError = NotFoundError
-Prisma.Decimal = Decimal
+Prisma.PrismaClientUnknownRequestError = PrismaClientUnknownRequestError;
+Prisma.PrismaClientRustPanicError = PrismaClientRustPanicError;
+Prisma.PrismaClientInitializationError = PrismaClientInitializationError;
+Prisma.PrismaClientValidationError = PrismaClientValidationError;
+Prisma.NotFoundError = NotFoundError;
+Prisma.Decimal = Decimal;
 
 /**
  * Re-export of sql-template-tag
  */
-Prisma.sql = sqltag
-Prisma.empty = empty
-Prisma.join = join
-Prisma.raw = raw
-Prisma.validator = Public.validator
+Prisma.sql = sqltag;
+Prisma.empty = empty;
+Prisma.join = join;
+Prisma.raw = raw;
+Prisma.validator = Public.validator;
 
 /**
-* Extensions
-*/
-Prisma.getExtensionContext = Extensions.getExtensionContext
-Prisma.defineExtension = Extensions.defineExtension
+ * Extensions
+ */
+Prisma.getExtensionContext = Extensions.getExtensionContext;
+Prisma.defineExtension = Extensions.defineExtension;
 
 /**
  * Shorthand utilities for JSON filtering
  */
-Prisma.DbNull = objectEnumValues.instances.DbNull
-Prisma.JsonNull = objectEnumValues.instances.JsonNull
-Prisma.AnyNull = objectEnumValues.instances.AnyNull
+Prisma.DbNull = objectEnumValues.instances.DbNull;
+Prisma.JsonNull = objectEnumValues.instances.JsonNull;
+Prisma.AnyNull = objectEnumValues.instances.AnyNull;
 
 Prisma.NullTypes = {
   DbNull: objectEnumValues.classes.DbNull,
   JsonNull: objectEnumValues.classes.JsonNull,
-  AnyNull: objectEnumValues.classes.AnyNull
-}
-
-
-
-
+  AnyNull: objectEnumValues.classes.AnyNull,
+};
 
 /**
  * Enums
  */
 exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
-  ReadUncommitted: 'ReadUncommitted',
-  ReadCommitted: 'ReadCommitted',
-  RepeatableRead: 'RepeatableRead',
-  Serializable: 'Serializable'
+  ReadUncommitted: "ReadUncommitted",
+  ReadCommitted: "ReadCommitted",
+  RepeatableRead: "RepeatableRead",
+  Serializable: "Serializable",
 });
 
 exports.Prisma.NoteScalarFieldEnum = {
-  id: 'id',
-  title: 'title',
-  content: 'content'
+  id: "id",
+  title: "title",
+  content: "content",
 };
 
 exports.Prisma.SortOrder = {
-  asc: 'asc',
-  desc: 'desc'
+  asc: "asc",
+  desc: "desc",
 };
 
 exports.Prisma.QueryMode = {
-  default: 'default',
-  insensitive: 'insensitive'
+  default: "default",
+  insensitive: "insensitive",
 };
 
-
 exports.Prisma.ModelName = {
-  Note: 'Note'
+  Note: "Note",
 };
 /**
  * Create the Client
@@ -116,37 +111,39 @@ const config = {
     "name": "client",
     "provider": {
       "fromEnvVar": null,
-      "value": "prisma-client-js"
+      "value": "prisma-client-js",
     },
     "output": {
-      "value": "/home/maxmena/Projects/notes-app-full/notes-app-server/generated/client",
-      "fromEnvVar": null
+      "value":
+        "/home/maxmena/Projects/notes-app-full/notes-app-server/generated/client",
+      "fromEnvVar": null,
     },
     "config": {
-      "engineType": "library"
+      "engineType": "library",
     },
     "binaryTargets": [
       {
         "fromEnvVar": null,
         "value": "debian-openssl-3.0.x",
-        "native": true
-      }
+        "native": true,
+      },
     ],
     "previewFeatures": [
-      "deno"
+      "deno",
     ],
-    "sourceFilePath": "/home/maxmena/Projects/notes-app-full/notes-app-server/prisma/schema.prisma",
-    "isCustomOutput": true
+    "sourceFilePath":
+      "/home/maxmena/Projects/notes-app-full/notes-app-server/prisma/schema.prisma",
+    "isCustomOutput": true,
   },
   "relativeEnvPaths": {
     "rootEnvPath": null,
-    "schemaEnvPath": "../../.env"
+    "schemaEnvPath": "../../.env",
   },
   "relativePath": "../../prisma",
   "clientVersion": "5.21.1",
   "engineVersion": "bf0e5e8a04cada8225617067eaa03d041e2bba36",
   "datasourceNames": [
-    "db"
+    "db",
   ],
   "activeProvider": "postgresql",
   "postinstall": false,
@@ -154,32 +151,47 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": null
-      }
-    }
+        "value": null,
+      },
+    },
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"deno\"]\n  output          = \"../generated/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Note {\n  id      Int    @id @default(autoincrement())\n  title   String\n  content String\n}\n",
-  "inlineSchemaHash": "e08b57cc71c42678d5fdcf11fd510ceb01f827162e8083bc89dbb8ea110b6778",
-  "copyEngine": true
-}
-config.dirname = '/'
+  "inlineSchema":
+    '// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider        = "prisma-client-js"\n  previewFeatures = ["deno"]\n  output          = "../generated/client"\n}\n\ndatasource db {\n  provider = "postgresql"\n  url      = env("DATABASE_URL")\n}\n\nmodel Note {\n  id      Int    @id @default(autoincrement())\n  title   String\n  content String\n}\n',
+  "inlineSchemaHash":
+    "e08b57cc71c42678d5fdcf11fd510ceb01f827162e8083bc89dbb8ea110b6778",
+  "copyEngine": true,
+};
+config.dirname = "/";
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"Note\":{\"dbName\":null,\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"Int\",\"default\":{\"name\":\"autoincrement\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"title\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"content\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"isGenerated\":false,\"isUpdatedAt\":false}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false}},\"enums\":{},\"types\":{}}")
-defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
-config.engineWasm = undefined
+config.runtimeDataModel = JSON.parse(
+  '{"models":{"Note":{"dbName":null,"fields":[{"name":"id","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":true,"isReadOnly":false,"hasDefaultValue":true,"type":"Int","default":{"name":"autoincrement","args":[]},"isGenerated":false,"isUpdatedAt":false},{"name":"title","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false},{"name":"content","kind":"scalar","isList":false,"isRequired":true,"isUnique":false,"isId":false,"isReadOnly":false,"hasDefaultValue":false,"type":"String","isGenerated":false,"isUpdatedAt":false}],"primaryKey":null,"uniqueFields":[],"uniqueIndexes":[],"isGenerated":false}},"enums":{},"types":{}}',
+);
+defineDmmfProperty(exports.Prisma, config.runtimeDataModel);
+config.engineWasm = undefined;
 
 config.injectableEdgeEnv = () => ({
   parsed: {
-    DATABASE_URL: typeof globalThis !== 'undefined' && globalThis['DATABASE_URL'] || typeof process !== 'undefined' && process.env && process.env.DATABASE_URL || undefined
-  }
-})
+    DATABASE_URL:
+      typeof globalThis !== "undefined" && globalThis["DATABASE_URL"] ||
+      typeof process !== "undefined" && process.env &&
+        process.env.DATABASE_URL ||
+      undefined,
+  },
+});
 
-if (typeof globalThis !== 'undefined' && globalThis['DEBUG'] || typeof process !== 'undefined' && process.env && process.env.DEBUG || undefined) {
-  Debug.enable(typeof globalThis !== 'undefined' && globalThis['DEBUG'] || typeof process !== 'undefined' && process.env && process.env.DEBUG || undefined)
+if (
+  typeof globalThis !== "undefined" && globalThis["DEBUG"] ||
+  typeof process !== "undefined" && process.env && process.env.DEBUG ||
+  undefined
+) {
+  Debug.enable(
+    typeof globalThis !== "undefined" && globalThis["DEBUG"] ||
+      typeof process !== "undefined" && process.env && process.env.DEBUG ||
+      undefined,
+  );
 }
 
-const PrismaClient = getPrismaClient(config)
-exports.PrismaClient = PrismaClient
-Object.assign(exports, Prisma)
-export { exports as default, Prisma, PrismaClient }
-
+const PrismaClient = getPrismaClient(config);
+exports.PrismaClient = PrismaClient;
+Object.assign(exports, Prisma);
+export { exports as default, Prisma, PrismaClient };

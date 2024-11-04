@@ -2,7 +2,7 @@
   "nodeModulesDir": "auto",
   "tasks": {
     "dev": "deno run --watch main.ts",
-    "db:push":"deno run -A npm:prisma db push"
+    "db:push": "deno run -A npm:prisma db push"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",

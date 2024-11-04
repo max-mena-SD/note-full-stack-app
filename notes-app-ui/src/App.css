@@ -14,7 +14,6 @@ body {
     grid-template-columns: 200px 1fr;
     gap: 20px;
   }
-
 }
 
 .notes-grid {
