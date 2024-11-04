@@ -1,0 +1,16 @@
+FROM denoland/deno:alpine-2.0.4
+
+WORKDIR /app
+
+COPY . .
+
+RUN deno run -A --unstable npm:prisma generate
+
+EXPOSE 5000
+
+CMD ["run", "--allow-read", "--allow-env", "--allow-net", "--allow-ffi", "--config", "deno.json", "main.ts"]
+
+
+# execute all 
+# docker build -t my-deno-backend .
+# docker run -p 5000:5000 my-deno-backend
